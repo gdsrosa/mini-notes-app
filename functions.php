@@ -12,3 +12,10 @@ function urlIs($route)
 {
     return $_SERVER['REQUEST_URI'] === $route;
 }
+
+function authorize($condition, $status = Response::FORBIDDEN)
+{
+    if (!$condition) {
+        abort($status);
+    }
+}
