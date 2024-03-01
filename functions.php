@@ -10,7 +10,7 @@ function dd($value)
 
 function urlIs($route)
 {
-    return $_SERVER['REQUEST_URI'] === $route;
+    return $_SERVER["REQUEST_URI"] === $route;
 }
 
 function authorize($condition, $status = Response::FORBIDDEN)
